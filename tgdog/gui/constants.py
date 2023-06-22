@@ -1,0 +1,1 @@
+CALLBACK_QUERY_SIGNATURE = chr(128054).encode()
