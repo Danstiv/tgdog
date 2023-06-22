@@ -2,9 +2,9 @@ from tgdog.enums import Gender
 
 
 try:
-    import pymorphy2
+    import pymorphy3
 except ImportError:
-    pymorphy2 = None
+    pymorphy3 = None
 
 CASES = ['nomn', 'gent', 'datv', 'accs', 'ablt', 'loct']
 
@@ -62,7 +62,7 @@ class NameWord(str):
 
     @classmethod
     def initialize_morph(cls):
-        cls.morph = pymorphy2.MorphAnalyzer()
+        cls.morph = pymorphy3.MorphAnalyzer()
 
     def parse(self):
         if self.__class__.morph is None:

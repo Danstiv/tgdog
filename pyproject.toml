@@ -27,7 +27,7 @@ dependencies = [
 [project.optional-dependencies]
 optional = [
     "aiosqlite==0.19.0",
-    "pymorphy2==0.9.1",
+    "pymorphy3==1.2.0",
     "uvloop==0.17.0",
 ]
 
