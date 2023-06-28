@@ -22,7 +22,7 @@ class TGBotDBMixin:
             self.db_url,
             # echo=True,
         )
-        async_session = sessionmaker(self.db_engine, AsyncSession, expire_on_commit=False)
+        async_session = sessionmaker(self.db_engine, class_=AsyncSession, expire_on_commit=False)
         self.session = async_session
 
     async def close_db(self):
