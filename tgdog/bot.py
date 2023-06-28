@@ -26,7 +26,7 @@ from tgdog.messages import TGBotMessagesMixin
 from tgdog.users import TGBotUsersMixin
 from tgdog.wrappers import apply_wrappers, name_inflection
 
-dotenv.load_dotenv()
+dotenv.load_dotenv('./.env')
 
 
 class BotController(
