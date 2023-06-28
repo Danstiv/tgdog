@@ -5,9 +5,9 @@ import sys
 
 import dotenv
 try:
-    import pymorphy2
+    import pymorphy3
 except ImportError:
-    pymorphy2 = None
+    pymorphy3 = None
 import pyrogram
 try:
     import uvloop  # type: ignore
@@ -63,8 +63,8 @@ class BotController(
         self.User = user_table or db.tables.User
         self.quote_reply_mode = quote_reply_mode
         self.username_inflection = username_inflection
-        if self.username_inflection and pymorphy2 is None:
-            raise ValueError('pymorphy2 is not installed')
+        if self.username_inflection and pymorphy3 is None:
+            raise ValueError('pymorphy3 is not installed')
         super().__init__()
 
     def get_global_filter(self):
