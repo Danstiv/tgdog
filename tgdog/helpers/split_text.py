@@ -87,6 +87,8 @@ def split_text(header, body, max_part_length, unit='char', header_separator='\n'
                 message += temp
                 added = True
                 units.remove(u)
+        if not added:
+            raise ValueError(SPLIT_ERROR)
         messages.append(message)
         if not units:
             break
